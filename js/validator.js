@@ -66,14 +66,13 @@ export class FormValidator extends Observer {
 
     updateObserver(data) {
         const currentField = this.getField(data["field"]);
-        console.log(this.schemaDataObject);
         const validation = this.schema.safeParse(this.schemaDataObject);
 
         if (!validation.success) {
             return this.onValidationFailure(validation, currentField);
         } 
 
-        this.onValidationSuceed(currentField);
+        this.onValidationSucceed(currentField);
     }
 
     onValidationFailure(validation, currentField) {
@@ -82,7 +81,7 @@ export class FormValidator extends Observer {
         this.setHasErrors(true); 
     }
 
-    onValidationSuceed(currentField) {
+    onValidationSucceed(currentField) {
         currentField.errorElement.innerText = "";
         this.setHasErrors(false);
     }
