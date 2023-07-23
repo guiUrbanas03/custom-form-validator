@@ -1,5 +1,5 @@
 export class Observer {
-    update() {
+    updateObserver() {
         throw new Error("Must implement update() method")
     }
 }
