@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validator</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <main class="container">
+        <form class="form-validator" method="post" novalidate data-schema="form">
+            <!-- name -->
+            <div class="field-container" data-validator="name">
+                <label for="name">Name</label>
+                <input type="text" name="name" placeholder="John Doe">
+                <p class="error"></p>
+            </div>
+    
+            <!-- age -->
+            <div class="field-container" data-validator="age">
+                <label for="age">Age</label>
+                <input type="number" name="age" placeholder="0">
+                <p class="error"></p>
+            </div>
+    
+            <!-- email -->
+            <div class="field-container" data-validator="email">
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="example@email.com">
+                <p class="error"></p>
+            </div>
+
+            <!-- password -->
+            <div class="field-container" data-validator="password">
+                <label for="password">Password</label>
+                <input type="password" name="password">
+                <p class="error"></p>
+            </div>
+
+            <!-- confirm password -->
+            <div class="field-container" data-validator="confirmPassword">
+                <label for="confirmPassword">Confirm password</label>
+                <input type="password" name="confirmPassword">
+                <p class="error"></p>
+            </div>
+
+            <!-- terms and conditions -->
+            <div class="field-container-checkbox" data-validator="termsAndConditions">
+                <input type="checkbox" name="termsAndConditions">
+                <label for="termsAndConditions">I accept terms and conditions</label>
+                <p class="error"></p>
+            </div>
+            
+            <!-- submit -->
+            <div class="field-container">
+                <button type="submit" disabled>Submit form</button>
+                <p class="error"></p>
+            </div>
+        </form>
+    </main>
+    <script src="./js/index.js" type="module"></script>
+</body>
+</html>
